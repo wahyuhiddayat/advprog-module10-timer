@@ -11,6 +11,17 @@ Kalimat "Wahyu's Computer: hey hey" dieksekusi terlebih dahulu karena dieksekusi
 
 ***Experiment 1.3: Multiple Spawn and removing drop***
 
+<div align="center">
+    <p>Tanpa `drop(spawner)`</p>
+    <img width="447" alt="Screenshot 2024-05-06 at 4 30 27 PM" src="https://github.com/wahyuhiddayat/advprog-module10-timer/assets/119432989/d38173c4-f341-4d54-8450-82ec1ee2febb">
+    <img width="447" alt="Screenshot 2024-05-06 at 4 31 00 PM" src="https://github.com/wahyuhiddayat/advprog-module10-timer/assets/119432989/3eae3f7c-be85-4af5-b354-aef9bedfc486">
+</div>
+
+<div align="center">
+    <p>Dengan `drop(spawner)`</p>
+    <img width="414" alt="Screenshot 2024-05-06 at 4 31 41 PM" src="https://github.com/wahyuhiddayat/advprog-module10-timer/assets/119432989/24714a08-f38e-4ad6-bf73-f54f122d07db">
+</div>
+
 Ketika `drop(spawner);` dikomentari, executor terus berputar dan "stuck" karena spawner masih ada. Hal ini membuat executor terus mengharapkan adanya task baru yang dikirim ke dalam ready queue. Namun, karena tidak ada task baru yang dikirim, executor tetap berjalan tanpa berhenti, mencari task yang tidak ada.
 
 Jika `drop(spawner);` tidak dikomentari, hal ini memberikan sinyal kepada executor bahwa tidak ada lagi task baru yang akan dikirim. Dengan demikian, executor dapat menyelesaikan prosesnya dengan benar setelah menyelesaikan task yang tersisa di dalam ready queue.
